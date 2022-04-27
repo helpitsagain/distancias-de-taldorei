@@ -12,14 +12,25 @@ def distanciasTaldorei(variavel):
     else:
         print("Unidade inválida. Por favor, insira 'km' ou 'mi'.")
     print("")
+
     continuar = str.upper(input("Deseja calcular outra distância? S/N "))
     if continuar == "S":
         print("")
         distancia = float(input("Distância no mapa: "))
         distanciasTaldorei(distancia)
     else:
-        print("")
         print("Obrigado por usar a Calculadora de Distâncias do mapa do roll20 dos Herdeiros de Tal'dorei!")
 
+    fechar = str.upper(input("Deseja encerrar o programa? S/N "))
+    if fechar == "N":
+        reiniciar = str.upper(input("Deseja calcular outra distância? S/N "))
+        if reiniciar == "S":
+            print("")
+            distancia = float(input("Distância no mapa: "))
+            distanciasTaldorei(distancia)
+        else:
+            print("")
+    else:
+        print("")
 
 distanciasTaldorei(distancia)
