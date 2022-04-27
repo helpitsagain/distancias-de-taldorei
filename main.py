@@ -19,7 +19,7 @@ def distanciasTaldorei(variavel):
         distanciasTaldorei(distancia)
     else:
         print("")
-        print("Obrigado por usar a Calculadora de Distâncias dos Herdeiros de Tal'dorei!")
+        print("Obrigado por usar a Calculadora de Distâncias do mapa do roll20 dos Herdeiros de Tal'dorei!")
 
 
 distanciasTaldorei(distancia)
