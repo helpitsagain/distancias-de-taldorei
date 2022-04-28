@@ -6,9 +6,9 @@ def distanciasTaldorei(variavel):
     unidade = str.upper(input("Você quer o resultado em km ou mi? "))
     if unidade == "KM":
         resultado *= 1.60934
-        print("A distância real medida no mapa é " + str(int(resultado)) + " km.")
+        print("A distância real medida no mapa é " + str(round(resultado, 2)) + " km.")
     elif unidade == "MI":
-        print("A distância real medida no mapa é " + str(int(resultado)) + " mi.")
+        print("A distância real medida no mapa é " + str(round(resultado, 2)) + " mi.")
     else:
         print("Unidade inválida. Por favor, insira 'km' ou 'mi'.")
     print("")
