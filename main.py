@@ -1,36 +1,25 @@
-distancia = float(input("Distância no mapa: "))
 
+def distancias_taldorei():
+    continuar = "S"
+    while continuar == "S":
 
-def distanciasTaldorei(variavel):
-    resultado = (200 * variavel) / 16.7
-    unidade = str.upper(input("Você quer o resultado em km ou mi? "))
-    if unidade == "KM":
-        resultado *= 1.60934
-        print("A distância real medida no mapa é " + str(round(resultado, 2)) + " km.")
-    elif unidade == "MI":
-        print("A distância real medida no mapa é " + str(round(resultado, 2)) + " mi.")
-    else:
-        print("Unidade inválida. Por favor, insira 'km' ou 'mi'.")
-    print("")
+        polegadas = float(input("Distância no mapa: "))
+        milhas = round(((200 * polegadas) / 16.7), 2)
+        quilometros = round((milhas * 1.60934), 2)
+        unidade = str.upper(input("Você quer o resultado em quilômetros (km) ou milhas (mi)? "))
 
-    continuar = str.upper(input("Deseja calcular outra distância? S/N "))
-    if continuar == "S":
-        print("")
-        distancia = float(input("Distância no mapa: "))
-        distanciasTaldorei(distancia)
-    else:
-        print("Obrigado por usar a Calculadora de Distâncias do mapa do roll20 dos Herdeiros de Tal'dorei!")
-
-    fechar = str.upper(input("Deseja encerrar o programa? S/N "))
-    if fechar == "N":
-        reiniciar = str.upper(input("Deseja calcular outra distância? S/N "))
-        if reiniciar == "S":
-            print("")
-            distancia = float(input("Distância no mapa: "))
-            distanciasTaldorei(distancia)
+        if unidade == "KM" or unidade == "QUILÔMETROS":
+            print(f"A distância real medida no mapa é de {quilometros} km.")
+        elif unidade == "MI" or unidade == "MILHAS":
+            print(f"A distância real medida no mapa é de {milhas} mi.")
         else:
-            print("")
-    else:
+            print("Unidade inválida. Por favor, insira 'km' ou 'mi'.")
+
+        print("")
+        continuar = str.upper(input("Deseja calcular outra distância? S/N "))
         print("")
 
-distanciasTaldorei(distancia)
+    print("Obrigado por usar a Calculadora de Distâncias do mapa do roll20 dos Herdeiros de Tal'dorei!")
+
+
+distancias_taldorei()
